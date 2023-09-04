@@ -1,0 +1,6 @@
+train: /content/drive/MyDrive/Solved.Earth/Solved.Earth_dataset/dataset/train.txt
+val: /content/drive/MyDrive/Solved.Earth/Solved.Earth_dataset/dataset/valid.txt
+
+nc: 5
+names: ['mug', 'bus', 'subway', 'cigarette', 'bottle']
+
