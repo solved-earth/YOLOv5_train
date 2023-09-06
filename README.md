@@ -51,7 +51,10 @@ ex)
 This is still ongoing project. Please contact us(ecotreegrowing@gmail.com) to discuss how we can work together.</b><br/>
 
 이 프로젝트는 아직 완전히 배포되지 않은 상태입니다. 이 프로젝트에 참여하시고자 한다면 저희 팀 이메일을 통해 연락주시길 바랍니다.(ecotreegrowing@gmail.com)
-
+<br/>
+<br/>
+<br/>
+<br/>
 ## 📁 About repository
 
 This repository contains the result of YOLOv5 training data, such as weights of the model, object detection module. They support the API of Solved.Earth. Dataset files are not included in this repository due to its huge capacity.
@@ -60,7 +63,7 @@ This repository contains the result of YOLOv5 training data, such as weights of 
 
 YOLOv5 model(.pt) was trained in Google Colab Workspace. Training data is saved in Google drive, and when training Google Colab load dataset from the mounted drive.
 
-YOLOv5 모델(.pt)은 Google Colab Workspace에서 교육되었으며, 교육 데이터는 Google 드라이브에 저장되며, Google Colab을 교육할 때는 마운트된 드라이브에서 데이터셋을 로드합니다.
+YOLOv5 모델(.pt)은 Google Colab Workspace에서 학습되었습니다. 학습 데이터는 Google 드라이브에 저장되며, Google Colab을 학습할 때는 마운트된 드라이브에서 데이터셋을 로드합니다.
 
 Source code - Google Colab: https://colab.research.google.com/drive/1L50j02n3ogPLDO8EDrmT3pPWsjqXA5zo#scrollTo=epOCkbBvv71B&uniqifier=2
 
@@ -82,21 +85,21 @@ data.yaml sets basic information for training. This contains the paths of traini
 
 data.yaml은 훈련을 위한 기본 정보를 설정합니다. 여기에는 훈련 데이터의 경로와 label(.txt) 파일과 일치되는 클래스 이름이 포함됩니다. 예를 들어 label text의 첫 번째 구성 요소가 3이면 'subway'를 가리킵니다.
 
-### 🏋️YOLOv5 Training Structure
+### 🏋️YOLOv5 Training Structure(YOLOv5 학습 구조)
 ![struct3](https://github.com/solved-earth/Solved.Earth/blob/main/report/struct3.jpg?raw=true)
 
 First, we get raw data from roboflow.com , and then re-label it according to our needs in label_edit_tool.py. This configured dataset enters train.py and model learning takes place.
 
 먼저 roboflow.com 에서 raw-data 를 가져온 다음 label_edit_tool.py에서 필요에 따라 레이블을 다시 지정합니다. 이렇게 구성된 데이터셋은 train.py로 들어가게되고 이후 모델(best.pt) 학습이 이루어집니다.
 
-### 💻Object-detection-protocol Structure
+### 💻Object-detection-protocol Structure(물체인식 프로토콜 구조)
 ![struct1](https://github.com/solved-earth/Solved.Earth/blob/main/report/struct1.jpg?raw=true)
 
-The learned model (best.pt ) received from YOLOv5 Training goes to detect.py for object detection. The source data is then received from FastAPI. The detected classes are then stored in a set called class_names and then moved back to FastAPI.
+The learned model (best.pt) received from YOLOv5 Training goes to detect.py for object detection. The source data is then received from FastAPI. The detected classes are then stored in a set called class_names and then moved back to FastAPI.
 
 YOLOv5 Training 에서 받아온 학습된 모델(best.pt)은 detect.py로 들어가 물체 탐지가 이루어집니다. 이때 소스 데이터는 FastAPI에서 받아오게 됩니다. 이후 탐지된 클래스는 class_names라는 집합에 저장되어 다시 FastAPI로 넘어갑니다.
 
-### 📷 Object Detection Examples
+### 📷 Object Detection Examples(물체인식 예제)
 ![](https://github.com/solved-earth/YOLOv5_train/blob/main/yolov5/runs/detect/exp9/sample8.jpg?raw=true)
 
 ![](https://github.com/solved-earth/YOLOv5_train/blob/main/yolov5/runs/detect/exp5/sample4.jpg?raw=true)
@@ -105,7 +108,7 @@ YOLOv5 Training 에서 받아온 학습된 모델(best.pt)은 detect.py로 들�
 
 ![](https://github.com/solved-earth/YOLOv5_train/blob/main/yolov5/runs/detect/exp8/sample7.jpg?raw=true)
 
-### 🖼 Model Training Result
+### 🖼 Model Training Result(모델 학습 결과)
 
 #### 1. Confusion Matrix
 ![confusion_matrix](https://github.com/solved-earth/YOLOv5_train/assets/121764610/bfe4a32d-d4ec-47e0-b79f-73cb5f66103c)
